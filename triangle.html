@@ -1,0 +1,32 @@
+<!doctype html>
+
+<html>
+  <head>
+    <style>
+      div {
+        height: 100px;
+        width: 100px;
+      }
+
+      .div1 {
+        position: relative;
+        transform: rotate(45deg);
+        overflow: hidden;
+      }
+
+      .div2 {
+        position: absolute;
+        transform: rotate(45deg);
+        top: 50px;
+        left: 50px;
+        background: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="div1">
+      <div class="div2"></div>
+    </div>
+  </body>
+</html>
