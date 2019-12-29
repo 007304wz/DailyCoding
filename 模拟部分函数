@@ -1,0 +1,25 @@
+/* 
+ *  Write function to imitate instanceof
+ *  { left } should be an instance
+ *  { right } should be a construction function
+*/
+
+function mockInstanceof(left, right) {
+    if(!!!left || typeof left !== 'object' || typeof right.prototype !== 'object') {    // typeof null === 'object'
+        return false;
+    }
+    
+    let proto = Object.getPrototypeOf(left);
+    
+    while(true) {
+        if(proto === null) {
+            return false;
+        }
+        
+        if(proto === right.prototype) {
+            return true;
+        }
+        
+        proto = Object.getPrototypeOf(proto);
+    }  
+} 
